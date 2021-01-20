@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - "${PORT_API}"
+    command: 'npm run start'
+    environment:
+      HOST_API: 0.0.0.0
+      PORT_API: ${PORT_API}
+      SITE_NAME: ${SITE_NAME}
+      TELEGRAM_TOKEN: ${TELEGRAM_TOKEN}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID}
+    ports:
+      - "${PORT_API}:${PORT_API}"
+    networks:
+      - web
+  nuxt:
+    container_name: front
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+     - "${PORT_FRONT}:${PORT_FRONT}"
+    expose:
+      - "${PORT_FRONT}"
+    environment:
+      HOST: 0.0.0.0
+      PORT: ${PORT_FRONT}
+    command: 'npm run start'
+    depends_on:
+      - api
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
+    # external:
+    #   name: nginx_web

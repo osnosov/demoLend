@@ -1,0 +1,38 @@
+{
+    "header": {
+        "logo": "logo",
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "choose": "Why Choose",
+        "portfolio": "Portfolio",
+        "process": "Process",
+        "clients": "Clients",
+        "contact": "Contact"
+    },
+    "intro": {
+        "title": "The best company",
+        "description": "We are in Ukraine.",
+        "message1": "Do you need a business card site?",
+        "message2": "Do you need a website for the company?",
+        "message3": "Do you need an online store?"
+    },
+    "services": {
+        "title": "Services",
+        "description": "Individual approach to each client",
+        "itemTitle1": "Website business card",
+        "itemDescription1": "Virtual business card company with concisely stated information about its services",
+        "itemTitle2": "The site of the company",
+        "itemDescription2": "Website for enterprises, dealers, technological companies, secondary and large firms",
+        "itemTitle3": "Online store",
+        "itemDescription3": "Modern online store with the possibility of payment of goods online"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "description": "Send me a note, and let’s get started on your project today!",
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Tell us more about your needs.",
+        "send": "Send Message"
+    }
+}
